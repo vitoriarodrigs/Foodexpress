@@ -1,3 +1,7 @@
+package com.vitoria.foodexpress_backend.services;
+
+import com.vitoria.foodexpress_backend.entities.Restaurant;
+import com.vitoria.foodexpress_backend.repositories.RestaurantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

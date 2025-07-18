@@ -1,6 +1,9 @@
+package com.vitoria.foodexpress_backend.entities;
 import jakarta.persistence.*;
 
+
 @Entity
+@Table(name = "foods") // Nome da tabela no banco
 public class Food {
 
     @Id
@@ -15,9 +18,9 @@ public class Food {
     @ManyToOne
     @JoinColumn(name = "restaurant_id", nullable = false)
     private Restaurant restaurant;
-
     // Construtor padrão
     public Food() {}
+
 
     // Construtor com argumentos
     public Food(String name, Double price) {

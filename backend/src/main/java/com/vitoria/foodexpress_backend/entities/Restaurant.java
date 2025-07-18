@@ -1,3 +1,10 @@
+
+package com.vitoria.foodexpress_backend.entities;
+
+import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class Restaurant {
     @Id
@@ -11,6 +18,9 @@ public class Restaurant {
 
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
     private List<Food> menu = new ArrayList<>();
+
+    public Restaurant() {
+    }
 
     public Restaurant( String name, String address){
         this.name = name;

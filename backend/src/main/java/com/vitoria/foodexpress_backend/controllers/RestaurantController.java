@@ -1,3 +1,7 @@
+package com.vitoria.foodexpress_backend.controllers;
+
+import com.vitoria.foodexpress_backend.entities.Restaurant;
+import com.vitoria.foodexpress_backend.services.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

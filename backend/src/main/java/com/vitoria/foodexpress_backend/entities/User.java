@@ -1,3 +1,7 @@
+package com.vitoria.foodexpress_backend.entities;
+
+import jakarta.persistence.*;
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -14,7 +18,6 @@ public class User {
     @Column(nullable = false)
     private String role; // CLIENT, RESTAURANT, DELIVERY
 
-
     public User() {}
 
     public User(String email, String password, String role) {
@@ -30,11 +33,13 @@ public class User {
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getEmail(){
         return email;
     }
+
     public void setEmail(String email){
-        this.email;
+        this.email = email;
     }
 
     public String getPassword() {

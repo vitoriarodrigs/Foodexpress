@@ -1,5 +1,6 @@
 package com.vitoria.foodexpress_backend.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -29,6 +30,7 @@ public class Order {
     private Restaurant restaurant;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference // <--- Lado "pai" (será serializado)
     private List<OrderItem> items = new ArrayList<>();
 
     @CreationTimestamp // Auto-popula a data de criação

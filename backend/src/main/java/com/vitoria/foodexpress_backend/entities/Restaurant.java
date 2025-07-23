@@ -1,6 +1,7 @@
 
 package com.vitoria.foodexpress_backend.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,7 @@ public class Restaurant {
     private String address;
 
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
+    @JsonManagedReference // <--- ANOTAÇÃO AQUI
     private List<Food> menu = new ArrayList<>();
 
     public Restaurant() {

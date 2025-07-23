@@ -34,6 +34,10 @@ public class RestaurantService {
         }
         return null;
     }
+    public Restaurant findById(Long id) {
+        return restaurantRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Restaurant not found with id: " + id));
+    }
 
     public void deletar(Long id) {
         restaurantRepository.deleteById(id);

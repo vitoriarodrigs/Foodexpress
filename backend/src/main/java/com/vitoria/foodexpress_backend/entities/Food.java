@@ -1,4 +1,5 @@
 package com.vitoria.foodexpress_backend.entities;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 
@@ -17,6 +18,7 @@ public class Food {
 
     @ManyToOne
     @JoinColumn(name = "restaurant_id", nullable = false)
+    @JsonBackReference // <--- ANOTAÇÃO AQUI
     private Restaurant restaurant;
     // Construtor padrão
     public Food() {}
@@ -61,4 +63,6 @@ public class Food {
     public void setRestaurant(Restaurant restaurant) {
         this.restaurant = restaurant;
     }
+
+
 }

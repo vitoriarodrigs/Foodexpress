@@ -1,5 +1,6 @@
 package com.vitoria.foodexpress_backend.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,6 +13,7 @@ public class OrderItem {
 
     @ManyToOne
     @JoinColumn(name = "order_id", nullable = false) // Relaciona com Order
+    @JsonBackReference // <--- Lado "filho" (não serializa)
     private Order order;
     @ManyToOne
     @JoinColumn(name = "food_id", nullable = false)

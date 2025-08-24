@@ -1,0 +1,81 @@
+/* 🔷 Fundo da Home */
+.home-container {
+  height: 100vh;
+ 
+  display: flex;
+  flex-direction: column;
+  font-family: "Cursive", sans-serif;
+}
+
+
+.main-content h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.highlight {
+  font-weight: bold;
+  font-size: clamp(1.6rem, 6vw, 2.8rem);
+}
+
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.home-container {
+ 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.banner-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.image-wrapper {
+  width: 600px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 50% / 30%; /* recorte oval */
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Conteúdo depois do banner */
+.main-content {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.highlight {
+  color: #e30613;
+  font-weight: bold;
+}

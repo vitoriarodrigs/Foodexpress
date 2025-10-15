@@ -17,9 +17,8 @@ const Navbar = () => {
         <a href="#home">Home</a>
         <a href="#categorias">Categorias</a>
         <a href="#restaurantes">Restaurantes</a>
-        <a href="#">Login</a>
+         <Link to="/login">Login</Link>
       </div>
-
       <Link to="/carrinho" className="cart-icon" title="Ir para o carrinho">
         🛒
       </Link>

@@ -17,8 +17,6 @@ const Home = () => {
           <img src={churrascoImg} alt="Churrasco" />
         </div>
       </section>
-
-      {/* Conteúdo abaixo */}
       <main className="main-content" id="home">
         <Categorias />
         <Restaurantes />
